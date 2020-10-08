@@ -1,5 +1,25 @@
-const theWidth = 1920;
-const theHeight = 1080;
+document.addEventListener("DOMContentLoaded", start);
+
+async function start() {
+  let response = await fetch("icon2.svg");
+  let mySvgData = await response.text();
+  document.querySelector("#thesvg").innerHTML = mySvgData;
+  startTheSvgClick();
+}
+function startTheSvgClick() {
+  const setStrokeBlack = document.querySelectorAll("path");
+  setStrokeBlack.forEach((e) => {
+    e.setAttribute("stroke", "black");
+  });
+
+  const tryOne = document.querySelector("#ElectIn");
+
+  tryOne.addEventListener("click", clickedShape);
+
+  function clickedShape() {
+    tryOne.setAttribute("fill", "red");
+  }
+}
 
 var bridge = document.getElementById("bridge"),
   bridgeCanvas = bridge.getContext("2d"),

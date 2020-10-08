@@ -13,29 +13,19 @@ body {
   display: block;
   margin: 0;
   position: absolute;
-  /* background-image: url("bed.svg"); */
-  /* background-size: cover; */
   width: 100%;
-  /* max-width: 750px; */
-  /* height: auto; */
-  /* cursor: crosshair; */
-  cursor: url("paw-tail-1.png") 55 55, crosshair;
+  /* cursor: crosshair;
+  cursor: url("paw-tail-1.png") 55 55, crosshair; */
   z-index: 2;
 }
-/* #picture {
-  position: absolute;
-  top: 10%;
-  display: block;
-  background-size: cover;
-  background-color: red;
-} */
 
 #bridgeContainer figcaption {
   margin-top: 2rem;
 }
-svg {
+#thesvg {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  cursor: col-resize;
 }
